@@ -12,25 +12,20 @@ unset($_SESSION['total']);
         <div class="product-title">
             <h2>
                 <a href="#">
-                    Thông báo thanh toán
+                    Thanh toán
                 </a>
             </h2>
-            <div class="title_hr_office">
-                <div class="title_hr_icon">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                </div>
-            </div>
         </div>
         <div class="notification-text">
             <?php if (isset($_SESSION['success'])) :?>
-                <div class="alert alert-success">
+                <div class="alert alert-success" style="background-color: #3c763dbd; color: #fff;">
                     <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
                 </div>
             <?php endif; ?>
         </div>
         <!--End.notification-text-->
         <div class="back-home" style="margin: 30px 0px;">
-            <a href="<?php echo base_url() ?>" class="btn btn-danger">Quay lại trang chủ</a>
+            <a href="<?php echo base_url() ?>" class="btn btn-danger" style="background-color: black;">Quay lại trang chủ</a>
         </div>
 
         <!-- Nội dung -->

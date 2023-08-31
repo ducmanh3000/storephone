@@ -14,16 +14,9 @@ $contact = $db->fetchsql($sql);
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item active">User</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
+        
         <div class="admin-title-top">
-            <h1>Tài khoản khách hàng</h1>
+            <h1 style="color: #1A1E28 !important; padding-bottom: 30px;">Liên hệ</h1>
         </div>
         <div class="clearfix"></div>
         <!--Thông báo lỗi    -->
@@ -32,43 +25,35 @@ $contact = $db->fetchsql($sql);
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <i class="fas fa-table"></i>
-                    Tài khoản</div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                            <tr>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr style="background-color: black; color: white;">
                                 <th>STT</th>
                                 <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
                                 <th>Email</th>
-                                <th>Xử lý</th>
+                                <th>Số điện thoại</th>
                                 <th>Trạng thái</th>
                             </tr>
-                            </thead>
+                        </thead>
                             <tbody>
                             <?php $stt = 1; foreach ($contact as $item): ?>
                                 <tr>
                                     <td><?php echo $stt ?></td>
                                     <td><?php echo $item['name'] ?></td>
-                                    <td><?php echo $item['phone'] ?></td>
                                     <td><?php echo $item['email'] ?></td>
-                                    <td>
-                                        <a class="btn btn-xs <?php echo $item['home'] == 0 ? 'btn-danger' : 'btn-success' ?>" href="status.php?id=<?php echo $item['id'] ?>">
-                                            <?php echo $item['home'] == 0 ? 'Chưa xử lý' : 'Đã xử lý' ?>
-                                        </a>
-                                    </td>
+                                    <td><?php echo $item['phone'] ?></td>
                                     <td>
                                         <ul class="list-action">
-                                            <li class="item-edit">
+                                            <li class="item-edit" style="width: 33px; height: 33px;">
                                                 <a href="view.php?id=<?php echo $item['id'] ?>" title="Xem chi tiết">
-                                                    <i class="fa fa-eye"></i>
+                                                    Xem
                                                 </a>
                                             </li>
                                             <li class="item-delete">
                                                 <a href="delete.php?id=<?php echo $item['id'] ?>" title="Xóa">
-                                                    <i class="fa fa-trash-alt"></i>
+                                                    Xóa
                                                 </a>
                                             </li>
                                         </ul>
@@ -76,10 +61,10 @@ $contact = $db->fetchsql($sql);
                                 </tr>
                                 <?php $stt++ ; endforeach ?>
                             </tbody>
-                        </table>
-                    </div>
+                    </table>
                 </div>
-                <div class="card-footer small text-muted">Đồ án tốt nghiệp - Sinh Viên: Tạ Mạnh Tiền</div>
+                </div>
+                </div>
             </div>
         </div>
         <!--End.admin-content-->

@@ -93,24 +93,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a href="index.php">Admin</a>
-            </li>
-            <li class="breadcrumb-item active">Thêm mới Admin</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
+        
 
         <div class="admin-title-top">
             <h1>Thêm mới Admin</h1>
         </div>
         <!-- End. admin-title-top   -->
         <div class="button-custom">
-            <a class="btn-add" href="index.php"><i class="fa fa-angle-double-left"></i> Trở về</a>
+            <a class="btn-add" href="index.php">Quay lại</a>
         </div>
         <!--Thông báo lỗi-->
         <?php require_once __DIR__."/../../../partials/notification.php"; ?>
@@ -119,7 +109,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-add-category form-product">
                 <form action="" method="POST" class="form-horizontal" enctype="multipart/form-data">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6" >
                             <div class="form-border-left">
                                 <div class="form-group">
                                     <label for="exampleInputCategory">Họ và tên</label>
@@ -160,7 +150,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                                         </p>
                                     <?php endif ?>
                                 </div>
-                                <button type="submit" class="btn btn-primary">Lưu</button>
+                                <button type="submit" class="btn btn-primary">Thêm mới</button>
                             </div>
                         </div>
                         <!--End.col-md-6-->
@@ -199,17 +189,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
                                         </p>
                                     <?php endif ?>
                                 </div>
-
-                                <div class="form-group">
-                                    <label for="exampleInputCategory">Ảnh đại diện</label>
-                                    <input type="file" class="form-control" id="exampleInputCategory" name="avatar">
-                                    <?php if (isset($error['avatar'])): ?>
-                                        <p class="text-danger">
-                                            <?php echo $error['avatar'] ?>
-                                        </p>
-                                    <?php endif ?>
-                                </div>
-
                             </div>
                         </div>
                         <!--End.col-md-6-->

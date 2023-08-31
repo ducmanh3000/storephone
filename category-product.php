@@ -34,17 +34,12 @@ $path = $_SERVER['SCRIPT_NAME'];
 
     <section class="box-main1">
             <div class="product-show">
-                <div class="product-title">
+                <div class="product-title" style="    margin-bottom: 30px; letter-spacing: 4px; font-family: "Montserrat", sans-serif;">
                     <h2>
                         <a href="#">
                             <?php echo $EditCategory['name'] ?>
                         </a>
                     </h2>
-                    <div class="title_hr_office">
-                        <div class="title_hr_icon">
-                            <i class="fa fa-motorcycle" aria-hidden="true"></i>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="showitem clearfix">

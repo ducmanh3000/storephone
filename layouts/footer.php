@@ -1,6 +1,37 @@
 </div>
 
-<div class="container-pluid footer">
+<!-- Footer -->
+<footer class="w3-row-padding w3-padding-32" style="padding-left: 265px; padding-top: 65px!important; padding-bottom: 65px!important;">
+    <div class="w3-third">
+      <h3>CONTACT</h3>
+      <p>HaNoi, VietNam</p>
+      <p>Phone: 0868378580</p>
+      <p>Email: manhdinh@gmail.com</p>
+    </div>
+
+    <div class="w3-third">
+      <h3>BLOG POSTS</h3>
+      <ul class="w3-ul w3-hoverable">
+        <li class="w3-padding-16">
+          <img src="<?php echo uploads() ?>/slider/21.jpg" class="w3-left w3-margin-right" style="width:50px">
+          <span class="w3-large">iPhone</span><br>
+          <span>Buy now</span>
+        </li>
+      </ul>
+    </div>
+  
+    
+    <div class="w3-third w3-serif">
+      <h3>POPULAR TAGS</h3>
+      <p>
+        <span class="w3-tag w3-black w3-margin-bottom">Smartphone</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">iPhone</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">SamSung</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Xiaomi</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">OPPO</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Vivo</span>
+        <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Realme</span> <span class="w3-tag w3-dark-grey w3-small w3-margin-bottom">Nokia</span>
+      </p>
+    </div>
+  </footer>
+
+<!-- <div class="container-pluid footer" style="margin-left:250px">
     <section id="footer-button">
         <div class="container-pluid">
             <div class="container">
@@ -11,37 +42,23 @@
                             <ul>
                                 <li>
 
-                                    <p><i class="fa fa-home" style="font-size: 16px;padding-right: 5px;"></i> Phường Đồng Nguyên - T.X Từ Sơn - Bắc Ninh </p>
-                                    <p><i class="sp-ic fa fa-mobile" style="font-size: 22px;padding-right: 5px;"></i> 0336636255</p>
-                                    <p><i class="sp-ic fa fa-envelope" style="font-size: 13px;padding-right: 5px;"></i> tienit04021997@gmail.com</p>
+                                    <p><i class="fa fa-home" style="font-size: 16px;padding-right: 5px;"></i> Cự Đà - Cự Khê - Thanh Oai - Hà Nội </p>
+                                    <p><i class="sp-ic fa fa-mobile" style="font-size: 22px;padding-right: 5px;"></i> 0971005069</p>
+                                    <p><i class="sp-ic fa fa-envelope" style="font-size: 13px;padding-right: 5px;"></i> manhdinh@gmail.com</p>
                                 </li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 no-padding-x footer-width">
-                        <div class="footer-custom">
-                            <h3 class="tittle-footer"> Fanpage</h3>
-                            <div class="fanpage-fb">
-                                <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fhondacaoson%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=387173625269621" width="100%" height="250" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 no-padding-x" >
-                        <h3 class="tittle-footer">Bản đồ</h3>
-                        <div class="google-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14886.675030209128!2d105.9740155!3d21.1257682!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc33b2a062467a9c2!2sHEAD+honda+Cao+S%C6%A1n!5e0!3m2!1sen!2s!4v1560448455317!5m2!1sen!2s" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="col-md-3 no-padding-l">
                         <h3 class="tittle-footer">Liên kết</h3>
                         <ul class="social-footer">
                             <li class="facebook-ft">
-                                <a target="_blank" href="https://www.facebook.com/hondacaoson/">
+                                <a target="_blank" href="https://www.facebook.com/profile.php?id=100017009025619/">
                                     <i class="fa fa-facebook-f"></i>
                                 </a>
                             </li>
                             <li class="youtube-ft">
-                                <a target="_blank" href="https://www.youtube.com/watch?v=ZNrOFvxNaCs">
+                                <a target="_blank" href="#">
                                     <i class="fa fa-youtube"></i>
                                 </a>
                             </li>
@@ -50,10 +67,7 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section id="ft-bottom">
-        <p class="text-center">Đồ án tốt nghiệp </p>
-    </section>
+    </section> -->
     <div class="chat-fb">
         <!-- WhatsHelp.io widget -->
         <script type="text/javascript">
@@ -71,19 +85,7 @@
         </script>
         <!-- /WhatsHelp.io widget -->
 
-        <div class="hotline-top">
-            <div class="call_detox_green">
-                <div class="call_detox_green_circle"><a href="tel:0336636255">0336636255</a></div>
-
-                <div class="call_detox_green_circle_fill"><a href="tel:0916123567">0336636255</a>
-                    <span style="color: rgb(0, 0, 255); line-height: 20.8px;"></span>
-                    <span style="line-height: 20.8px;"><font color="#ff0000"> </font></span></div>
-
-                <div class="call_detox_green_icon"><a href="tel:0916123567">0336636255</a> </div>
-            </div>
-
-            <div class="quick-alo-ph-number">0336636255</div>
-        </div>
+        
 
         <div class="scroll-top">
             <a href="javascript:" id="return-to-top"><i class="fa fa-arrow-up"></i></a>

@@ -23,22 +23,24 @@ body{
     margin-top: 20px;
 }
 .product-title h2{
-    font-size: 30px !important;
+    font-size: 28px !important;
     color: #101010;
     text-transform: uppercase;
     font-weight: bold;
-    padding-bottom: 0px;
+    letter-spacing: 4px;
+    font-family: "Roboto";
+    letter-spacing: 4px;
 }
 .product-title h2 a{
     color: #101010;
 }
-.title_hr_icon i.fa{font-size: 20px; color: #ef0707;}
+.title_hr_icon i.fa{font-size: 20px; color: rgba(22, 22, 23, .8);}
 .title_hr_office{position:relative; text-align:center; margin-bottom:15px;}
 .title_hr_office:after {
     width: 50px;
     height: 2px;
     content: "";
-    background: #ef0707;
+    background: rgba(22, 22, 23, .8);;
     width: 50px;
     display: inline-block;
     position: relative;
@@ -48,7 +50,7 @@ body{
     width: 50px;
     height: 2px;
     content: "";
-    background: #ef0707;
+    background: rgba(22, 22, 23, .8);;
     width: 50px;
     display: inline-block;
     position: relative;
@@ -131,7 +133,7 @@ body{
 
 }
 .post-info-title a:hover{
-    color: red;
+    color: #45C817;
 }
 .post-des{
     color: #333;
@@ -146,13 +148,13 @@ body{
 }
 .readMore a{
     padding: 10px 20px;
-    background: red;
+    background: black;
     color: #fff;
     text-transform: uppercase;
     border-radius: 5px;
 }
 .readMore a:hover{
-    background: #0b2be8;
+    background: rgba(22, 22, 23, .8);
 }
 .post-custom{
     margin-bottom: 20px;
@@ -228,18 +230,18 @@ body{
     position: fixed;
     bottom: 140px;
     z-index: 9999;
-    left: 230px;
+    right: 10px;
 }
 .call_detox_green {
     width: 200px;
     height: 200px;
     display: block;
     position: absolute;
-    top: 0px;
+    top: -226px;
     overflow: hidden;
     z-index: 999999;
     cursor: pointer;
-    right: 68px;
+    right: -68px;
 }
 .call_detox_greenleft {
     display:none;
@@ -287,7 +289,7 @@ body{
     left: 60px;
     position: absolute;
     opacity: .75;
-    background: #ff0000 none;
+    background: rgba(22, 22, 23, .8) none;
     border: 2px solid transparent;
     border-radius: 100%;
     -moz-border-radius: 100%;
@@ -321,8 +323,9 @@ body{
     right: 70px;
     width: 60px;
     height: 60px;
-    background: #ff0000 url(http://daynghephache.vn/profiles/daynghephachevn/uploads/attach/1513589009_custom-1490238170-messag-03.png) no-repeat center center;
-    border: 2px solid transparent;
+    background: rgba(22, 22, 23, .8) ;
+/*    url(http://daynghephache.vn/profiles/daynghephachevn/uploads/attach/1513589009_custom-1490238170-messag-03.png) no-repeat center center;
+*/    border: 2px solid transparent;
     opacity: .7;
     border-radius: 100%;
     -moz-border-radius: 100%;
@@ -407,7 +410,6 @@ body{
                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    100%{transform:rotate(0) scale(1) skew(1deg)}}
 .fix {
     position:fixed;
-    background: #0a32f7;
     top: 0;
     right: 0;
     border-bottom: 1px solid #eee;
@@ -447,10 +449,12 @@ body{
 
 #return-to-top {
     position: fixed;
-    bottom: 85px;
-    right: 20px;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.7);
+    bottom: 26px;
+    right: 7px;
+    background-color: rgba(22, 22, 23, .8) ;
+    
+/*    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.7);*/
     width: 50px;
     height: 50px;
     display: block;
@@ -469,6 +473,7 @@ body{
     color: #fff;
     margin: 0;
     position: relative;
+   /* background-color: #45C817;*/
     left: 16px;
     top: 13px;
     font-size: 19px;
@@ -516,7 +521,12 @@ body{
     }
     .item-img img{
         width: 100%;
-        height: 350px !important;
+        height: 475px !important;
+        object-fit: cover;
+    }
+    .item-imgg img{
+        width: 100%;
+        height: 200px !important;
         object-fit: cover;
     }
     .product-show .col-md-3.col-xs-12.item-product {

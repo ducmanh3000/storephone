@@ -12,16 +12,8 @@ $sql = "SELECT comment.* FROM comment ORDER BY ID DESC ";
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item active">Bình luận</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
         <div class="admin-title-top">
-            <h1>Bình luận sản phẩm</h1>
+            <h1 style="color: #1A1E28 !important; padding-bottom: 30px;">Bình luận sản phẩm</h1>
         </div>
         <div class="clearfix"></div>
         <!--Thông báo lỗi    -->
@@ -30,43 +22,35 @@ $sql = "SELECT comment.* FROM comment ORDER BY ID DESC ";
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <i class="fas fa-table"></i>
-                    Bình luận</div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                            <tr>
-                                <th>STT</th>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr style="background-color: black; color: white;">
+                            <th>STT</th>
                                 <th>Tên khách hàng</th>
-                                <th>Số điện thoại</th>
                                 <th>Email</th>
-                                <th>Hiển thị</th>
+                                <th>Số điện thoại</th>
                                 <th>Trạng thái</th>
                             </tr>
-                            </thead>
+                        </thead>
                             <tbody>
                             <?php $stt = 1; foreach ($comment as $item): ?>
                                 <tr>
                                     <td><?php echo $stt ?></td>
                                     <td><?php echo $item['name'] ?></td>
-                                    <td><?php echo $item['phone'] ?></td>
                                     <td><?php echo $item['email'] ?></td>
-                                    <td>
-                                        <a class="btn <?php echo $item['status'] == 1 ? 'btn-success' : 'btn-danger' ?>" href="home.php?id=<?php echo $item['id'] ?>">
-                                            <?php echo $item['status'] == 1 ? 'Hiển thị' : 'Không hiển thị' ?>
-                                        </a>
-                                    </td>
+                                    <td><?php echo $item['phone'] ?></td>
                                     <td>
                                         <ul class="list-action">
-                                            <li class="item-edit">
+                                            <li class="item-edit" style="width: 35px; height: 35px;">
                                                 <a href="view.php?id=<?php echo $item['id'] ?>" title="Xem chi tiết">
-                                                    <i class="fa fa-eye"></i>
+                                                    Xem
                                                 </a>
                                             </li>
-                                            <li class="item-delete">
+                                            <li class="item-delete" style="width: 35px; height: 35px;">
                                                 <a href="delete.php?id=<?php echo $item['id'] ?>" title="Xóa danh mục">
-                                                    <i class="fa fa-trash-alt"></i>
+                                                    Xóa
                                                 </a>
                                             </li>
                                         </ul>
@@ -74,10 +58,10 @@ $sql = "SELECT comment.* FROM comment ORDER BY ID DESC ";
                                 </tr>
                                 <?php $stt++ ; endforeach ?>
                             </tbody>
-                        </table>
-                    </div>
+                    </table>
                 </div>
-                <div class="card-footer small text-muted">Đồ án tốt nghiệp - Sinh Viên: Tạ Mạnh Tiền</div>
+                </div>
+                </div>
             </div>
         </div>
         <!--End.admin-content-->

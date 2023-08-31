@@ -13,7 +13,7 @@ $CategoryProductHome = $db->fetchsql($sqlHomecate);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Motor Cao Sơn</title>
+    <title>Công Ty Itop</title>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>public/frontend/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>public/frontend/css/bootstrap.min.css">
@@ -29,174 +29,239 @@ $CategoryProductHome = $db->fetchsql($sqlHomecate);
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>public/frontend/css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    </style>
+
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=387173625269621&autoLogAppEvents=1"></script>
 
 </head>
-<body>
-<div id="wrapper">
-    <!---->
-    <!--HEADER-->
-    <div id="header">
-        <div id="header-top">
-            <div class="container">
-                <div class="row clearfix">
-                    <div class="col-md-6" id="header-text">
-                        <a>Motor Cao Sơn</a><b>xin kính chào quý khách !</b>
-                    </div>
-                    <div class="col-md-6">
-                        <nav id="header-nav-top">
-                            <ul class="list-inline pull-right" id="headermenu">
-                                <!--Kiểm tra điều kiện nếu đăng nhâp tài khoản thì hiện nút thoát hoặc đăng xuất-->
-
-                                <?php if (isset($_SESSION['name_user'])): ?>
-                                    <li>
-                                        Xin chào: <strong style="color: red;"><?php echo $_SESSION['name_user'] ?></strong>
-                                    </li>
-                                    <li>
-                                        <a href=""><i class="fa fa-user"></i> Tài khoản <i class="fa fa-caret-down"></i></a>
-                                        <ul id="header-submenu">
-                                            <li><a href="">Thông tin</a></li>
-                                            <li><a href="gio-hang.php">Giỏ hàng</a></li>
-                                            <li><a href="logout.php">Đăng xuất</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="logout.php"><i class="fa fa-share-square-o"></i> Đăng xuất</a>
-                                    </li>
-                                <!--Còn ngược lại sẽ hiển thị đăng ký - đăng nhập-->
-                                <?php else: ?>
-                                    <li>
-                                        <a href="dang-nhap.php"><i class="fa fa-unlock"></i> Đăng nhập</a>
-                                    </li>
-                                    <li>
-                                        <a href="dang-ky.php"><i class="fa fa-users"></i> Đăng ký</a>
-                                    </li>
-                                <?php endif; ?>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
+<body class="w3-content" style="max-width:1200px">
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+    <div class="w3-container w3-display-container w3-padding-16">
+        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        <a href="index.php"><h3 class="w3-wide"><b>PHONE STORE </b></h3> </a>
+    </div>
+    <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+        <a href="<?php echo base_url() ?>" class="w3-bar-item w3-button">Trang chủ</a>
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" >
+        Sản phẩm </i>
+        </a>
+        <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <ul>
+                <?php foreach ($category_product as $item) : ?>
+                    <li>
+                        <a class="w3-bar-item w3-button" href="category-product.php?id=<?php echo $item['id'] ?>">
+                            <?php echo $item['name'] ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
         </div>
-        <div class="container">
-            <div class="row" id="header-main">
-                <div class="col-md-5">
-                    <form action="search.php" method="GET" class="form-inline" enctype="multipart/form-data">
-                        <div class="form-group">
-                            <input type="text" id="searchf" name="search" placeholder="Nhập tên sản phẩm tìm kiếm" class="form-control">
-                            <button type="submit" name="btnsearch" id="searchbtn" value="Search" class="btn btn-default"><i class="fa fa-search"></i></button>
-                        </div>
-                    </form>
+        <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" >
+        Tin tức </i>
+        </a>
+        <div id="tintuc" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <ul>
+                <?php foreach ($category_post as $item) : ?>
+                    <li>
+                        <a class="w3-bar-item w3-button"  href="category-post.php?id=<?php echo $item['id'] ?>">
+                            <?php echo $item['name'] ?>
+                        </a>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <a href="contact.php" class="w3-bar-item w3-button">Liên hệ</a>
+        <a href="gio-hang.php" class="w3-bar-item w3-button">Giỏ hàng</a>
+    </div>
+    <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Newsletter</a> 
+    <a href="#footer"  class="w3-bar-item w3-button w3-padding">Subscribe</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+    <div class="w3-bar-item w3-padding-24 w3-wide">LOGO</div>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 
-                </div>
-                <div class="col-md-4">
-                    <a href="">
-                        <img class="logo-img" src="<?php echo uploads() ?>/logo/logo2.png">
-                    </a>
-                </div>
-                <div class="col-md-3" id="header-right">
-                    <div class="pull-right">
-                        <div class="pull-left">
-                            <i class="glyphicon glyphicon-phone-alt"></i>
-                        </div>
-                        <div class="pull-right">
-                            <p id="hotline">HOTLINE</p>
-                            <p>0336636255</p>
-                        </div>
+    <div class="w3-main" style="margin-left:250px">
 
-                    </div>
+    <!-- Push down content on small screens -->
+    <div class="w3-hide-large" style="margin-top:83px"></div>
+    
+    <!-- Top header -->
+    
+    <header class="w3-container w3-xlarge" style="padding-top: 22px; padding-bottom: 22px;">
+        <i class="fa ">
+            <form action="search.php" method="GET" class="form-inline" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" id="searchf" name="search" placeholder="Nhập tên sản phẩm tìm kiếm" class="form-control">
+                    <button type="submit" name="btnsearch" id="searchbtn" value="Search" class="btn btn-default"><i class="fa fa-search"></i></button>
                 </div>
+            </form>
+        </i>
+        <a href="gio-hang.php"><i class="fa fa-shopping-cart w3-margin-right"></i></a>
+
+        <p class="w3-right">
+        <ul class="list-inline pull-right" id="headermenu" style="font-size: 18px!important">
+            <!--Kiểm tra điều kiện nếu đăng nhâp tài khoản thì hiện nút thoát hoặc đăng xuất-->
+            <?php if (isset($_SESSION['name_user'])): ?>
+                <li>
+                    Xin chào: <strong style="font-size: 15px!important; color: red"><?php echo $_SESSION['name_user'] ?></strong>
+                </li>
+                <li>
+                    <a href=""><i class="fa fa-user"></i> Tài khoản <i class="fa fa-caret-down"></i></a>
+                    <ul id="header-submenu" style="font-size: 15px!important">
+                        <li><a href="">Thông tin</a></li>
+                        <li><a href="gio-hang.php">Giỏ hàng</a></li>
+                        <li><a href="logout.php">Đăng xuất</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="logout.php"><i class="fa fa-share-square-o"></i> Đăng xuất</a>
+                </li>
+
+            <!--Còn ngược lại sẽ hiển thị đăng ký - đăng nhập-->
+            <?php else: ?>
+            <li>
+                <a href="dang-nhap.php"><i class="fa fa-unlock"></i> Đăng nhập</a>
+            </li>
+            <li>
+                <a href="dang-ky.php"><i class="fa fa-users"></i> Đăng ký</a>
+            </li>
+            <?php endif; ?>
+        </ul>
+        </p>
+    </header>
+    
+
+    </div>
+    
+
+    <!-- Image header -->
+    <div class="w3-main" style="margin-left:250px">
+        <div class="w3-display-container w3-container">
+            <img src="<?php echo uploads() ?>/slider/21.jpg" alt="Jeans" style="width:100%">
+            <div class="w3-display-topleft w3-text-white" style="padding:24px 48px">
+            <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
+            <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
+            <h1 class="w3-hide-small">COLLECTION 2023</h1>
+            <p><a href="page-product.php" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
             </div>
         </div>
     </div>
-    <!--END HEADER-->
+
+  
 
 
-    <!--MENUNAV-->
-    <div id="menunav" class="header-fix">
-        <div class="container">
-            <nav>
-                <ul id="menu-main" class="menu-custom">
-                    <li>
-                        <a href="<?php echo base_url() ?>">Trang chủ</a>
-                    </li>
-                    <li>
-                        <a href="page-product.php">Sản phẩm</a>
-                    </li>
-                    <li>
-                        <a href="page-post.php">Tin tức</a>
-                    </li>
-                    <li>
-                        <a href="contact.php">Liên hệ</a>
-                    </li>
-                </ul>
-                <!-- end menu main-->
+    
 
-                <!--Shopping-->
-                <ul class="pull-right" id="main-shopping">
-                    <li>
-                        <a href="gio-hang.php"><i class="fa fa-shopping-basket"></i> Giỏ hàng </a>
-                    </li>
-                </ul>
-                <!--end Shopping-->
-            </nav>
+
+<!-- <section id="slide" class="text-center" >
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <!-- <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+            </ol> -->
+
+            <!-- Wrapper for slides -->
+            <!-- <div class="carousel-inner">
+
+                <div class="item item-img active">
+                    <img src="<?php echo uploads() ?>/slider/12.jpg" alt="Los Angeles" style="width:100%;">
+                </div>
+
+                <div class="item item-img">
+                    <img src="<?php echo uploads() ?>/slider/2.jpg" alt="Chicago" style="width:100%;">
+                </div>
+
+                <div class="item item-img">
+                    <img src="<?php echo uploads() ?>/slider/15.jpg" alt="New York" style="width:100%;">
+                </div>
+
+                <div class="item item-img">
+                    <img src="<?php echo uploads() ?>/slider/5.webp" alt="New York" style="width:100%;">
+                </div>
+
+            </div> -->
+            <!-- Left and right controls -->
+            <!-- <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
-    </div>
-    <!--ENDMENUNAV-->
+    </section> --> 
+
+
+
+    
+    
+
+
+    
 
     <div id="maincontent">
         <div class="container">
             <div class="col-md-3  fixside" >
-                <div class="box-left box-menu" >
-                    <h3 class="box-title"><i class="fa fa-list"></i>  Danh mục sản phẩm</h3>
-                    <ul>
-                        <?php foreach ($category_product as $item) : ?>
-                            <li>
-                                <a href="category-product.php?id=<?php echo $item['id'] ?>">
-                                    <?php echo $item['name'] ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
+                
 
-                <div class="box-left box-menu" >
-                    <h3 class="box-title"><i class="fa fa-book"></i>  Danh mục tin tức</h3>
-                    <ul>
-                        <?php foreach ($category_post as $item) : ?>
-                            <li>
-                                <a href="category-post.php?id=<?php echo $item['id'] ?>">
-                                    <?php echo $item['name'] ?>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-
-                <div class="box-left box-menu">
-                    <h3 class="box-title"><i class="fa fa-motorcycle"></i>  Sản phẩm mới </h3>
-                    <!--  <marquee direction="down" onmouseover="this.stop()" onmouseout="this.start()"  > -->
-                    <ul>
-                        <?php foreach ($productNew as $item) : ?>
-                            <li class="clearfix">
-                                <a href="product-detail.php?id=<?php echo $item['id'] ?>">
-                                    <img src="<?php echo uploads() ?>product/<?php echo $item['thumbar'] ?>" class="img-responsive pull-left" width="80" height="80">
-                                    <div class="info pull-right">
-                                        <p class="name"><?php echo $item['name'] ?></p >
-                                        <?php if ($item['sale'] > 0): ?>
-                                            <p><strike class="sale"><?php echo formatPrice($item['price']) ?></strike>
-                                                <br>
-                                                <b class="price"><?php echo formatpricesale($item['price'],$item['sale']) ?></b></p>
-                                        <?php else: ?>
-                                            <p><b style="color: #ea3a3c;"><?php echo formatPrice($item['price']) ?></b></p>
-                                        <?php endif;  ?>
-                                    </div>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <!-- </marquee> -->
-                </div>
+                
             </div>
+
+
+            <script>
+            // Accordion 
+            function myAccFunc() {
+            var x = document.getElementById("demoAcc");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+            }
+
+            function myAccFunc1() {
+            var x = document.getElementById("tintuc");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+            }
+
+            // Click on the "Jeans" link on page load to open the accordion for demo purposes
+            document.getElementById("myBtn").click();
+
+
+            // Open and close sidebar
+            function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+            }
+            
+            function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+            }
+            </script>

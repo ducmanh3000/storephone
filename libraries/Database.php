@@ -15,7 +15,7 @@ class Database
 
     public function __construct()
     {
-        $this->link = mysqli_connect("localhost","root","","storemotor") or die ();
+        $this->link = mysqli_connect("localhost","root","","storephone") or die ();
         mysqli_set_charset($this->link,"utf8");
     }
 

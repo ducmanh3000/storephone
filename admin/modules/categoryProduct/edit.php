@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     if(empty($error)){
         if($EditCategory['name'] != $data['name']){
             $isset = $db->fetchOne("category_product","name = '".$data['name']."' ");
-            if (count($isset) > 0)
+            if (is_countable($isset) && count($isset) > 0)
             {
                 $_SESSION['error'] = "Tên danh mục đã tồn tại !";
             }

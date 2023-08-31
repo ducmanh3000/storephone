@@ -38,14 +38,10 @@ $path = $_SERVER['SCRIPT_NAME'];
             <div class="product-title">
                 <h2>
                     <a href="#">
-                        Các loại xe
+                        tất cả sản phẩm
                     </a>
                 </h2>
-                <div class="title_hr_office">
-                    <div class="title_hr_icon">
-                        <i class="fa fa-motorcycle" aria-hidden="true"></i>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="showitem clearfix">

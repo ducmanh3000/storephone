@@ -104,7 +104,7 @@ function  postInput($string)
 
 function base_url()
 {
-    return $url  = "http://localhost/storemotor/";
+    return $url  = "http://localhost/storephone/";
 }
 
 
@@ -144,6 +144,14 @@ if ( ! function_exists('redirectStyle'))
 if ( ! function_exists('redirectAdmin'))
 {
     function redirectAdmin($url = "")
+    {
+        header("location: ".base_url()."admin/modules/{$url}");exit();
+    }
+}
+
+if ( ! function_exists('redirectUser'))
+{
+    function redirectUser($url = "")
     {
         header("location: ".base_url()."admin/modules/{$url}");exit();
     }

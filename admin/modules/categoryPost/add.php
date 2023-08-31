@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // error trống có nghĩa là không có lỗi
     if(empty($error)){
         $isset = $db->fetchOne("category_post","name = '".$data['name']."' ");
-        if (count($isset) > 0)
+        if (is_countable($isset) && count($isset) > 0)
         {
             $_SESSION['error'] = "Tên danh mục đã tồn tại !";
         }

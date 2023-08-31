@@ -58,20 +58,20 @@ foreach ($CategoryProductHome as $item)
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
 
-                <div class="item item-img active">
-                    <img src="<?php echo uploads() ?>/slider/1a.jpg" alt="Los Angeles" style="width:100%;">
+                <div class="item item-imgg active">
+                    <img src="<?php echo uploads() ?>/slider/1.png" alt="Los Angeles" style="width:100%;">
                 </div>
 
-                <div class="item item-img">
-                    <img src="<?php echo uploads() ?>/slider/1b.jpg" alt="Chicago" style="width:100%;">
+                <div class="item item-imgg">
+                    <img src="<?php echo uploads() ?>/slider/2.webp" alt="Chicago" style="width:100%;">
                 </div>
 
-                <div class="item item-img">
-                    <img src="<?php echo uploads() ?>/slider/1c.jpg" alt="New York" style="width:100%;">
+                <div class="item item-imgg">
+                    <img src="<?php echo uploads() ?>/slider/3.webp" alt="New York" style="width:100%;">
                 </div>
 
-                <div class="item item-img">
-                    <img src="<?php echo uploads() ?>/slider/1d.jpg" alt="New York" style="width:100%;">
+                <div class="item item-imgg">
+                    <img src="<?php echo uploads() ?>/slider/4.webp" alt="New York" style="width:100%;">
                 </div>
 
             </div>
@@ -89,19 +89,15 @@ foreach ($CategoryProductHome as $item)
 
     <section class="box-main1">
         <div class="product-show product-hot">
-            <div class="product-title">
+            <div class="product-title" style="    margin-bottom: 30px; letter-spacing: 4px; font-family: 'Roboto', sans-serif;">
                 <h2>
                     <a href="#">
-                        Sản phẩm bán chạy
+                         sản phẩm nổi bật
                     </a>
                 </h2>
-                <div class="title_hr_office">
-                    <div class="title_hr_icon">
-                        <i class="fa fa-motorcycle" aria-hidden="true"></i>
-                    </div>
-                </div>
+               
             </div>
-
+            
             <div class="showitem">
                 <?php foreach ($productPay as $item): ?>
                     <div class="col-md-3 col-xs-12 item-product">
@@ -109,9 +105,9 @@ foreach ($CategoryProductHome as $item)
                             <a href="product-detail.php?id=<?php echo $item['id'] ?>">
                                 <img src="<?php echo uploads() ?>/product/<?php echo $item['thumbar'] ?>" class="" width="100%" height="180">
                             </a>
-                            <div class="info-item">
-                                <h1 class="info-product-item">
-                                    <a href="product-detail.php?id=<?php echo $item['id'] ?>"><?php echo $item['name'] ?></a>
+                            <div class="info-item" style="color: black;">
+                                <h1 class="info-product-item" style="line-height: 0.75; color: black;">
+                                    <a href="product-detail.php?id=<?php echo $item['id'] ?>" style="color: black;"><?php echo $item['name'] ?></a>
                                 </h1>
                                 <?php if ($item['sale'] > 0): ?>
                                     <p><strike class="sale"><?php echo formatPrice($item['price']) ?></strike>
@@ -133,17 +129,13 @@ foreach ($CategoryProductHome as $item)
         </div>
         <?php foreach ($data as $key => $value): ?>
         <div class="product-show">
-            <div class="product-title">
+            <div class="product-title" style="    margin-bottom: 30px; letter-spacing: 4px; font-family: 'Roboto', sans-serif;">
                 <h2>
                     <a href="#">
                         <?php echo $key ?>
                     </a>
                 </h2>
-                <div class="title_hr_office">
-                    <div class="title_hr_icon">
-                        <i class="fa fa-motorcycle" aria-hidden="true"></i>
-                    </div>
-                </div>
+                
             </div>
 
             <div class="showitem">
@@ -154,8 +146,8 @@ foreach ($CategoryProductHome as $item)
                                 <img src="<?php echo uploads() ?>/product/<?php echo $item['thumbar'] ?>" class="" width="100%" height="180">
                             </a>
                             <div class="info-item">
-                                <h1 class="info-product-item">
-                                    <a href="product-detail.php?id=<?php echo $item['id'] ?>"><?php echo $item['name'] ?></a>
+                                <h1 class="info-product-item" style="line-height: 0.75; color: black;">
+                                    <a href="product-detail.php?id=<?php echo $item['id'] ?>" style="color: black;"><?php echo $item['name'] ?></a>
                                 </h1>
                                 <?php if ($item['sale'] > 0): ?>
                                     <p><strike class="sale"><?php echo formatPrice($item['price']) ?></strike>
@@ -180,50 +172,12 @@ foreach ($CategoryProductHome as $item)
         <div class="banner-motor">
             <div class="bannerBlock imageHover">
                 <a href="">
-                    <img src="<?php echo base_url() ?>public/frontend/images/glx.png" alt="Kawasaki">
+                    <img src="<?php echo base_url() ?>public/frontend/images/2.jpg" alt="Kawasaki">
                 </a>
             </div>
         </div>
 
-        <div class="page-news">
-            <div class="product-title">
-                <h2>
-                    <a href="#">
-                        Tin tức mới
-                    </a>
-                </h2>
-                <div class="title_hr_office">
-                    <div class="title_hr_icon">
-                        <i class="fa fa-book" aria-hidden="true"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="post-row">
-                <div class="row">
-                    <?php foreach ($postNew as $item) : ?>
-                        <div class="col-xs-12 col-md-4">
-                            <div class="post-custom">
-                                <div class="post-img">
-                                    <a href="post-detail.php?id=<?php echo $item['id'] ?>" title="<?php echo $item['name'] ?>">
-                                        <img src="<?php echo uploads() ?>post/<?php echo $item['thumbar'] ?>" alt="" />
-                                    </a>
-                                </div>
-                                <div class="post-info">
-                                    <h3 class="post-info-title">
-                                        <a href="post-detail.php?id=<?php echo $item['id'] ?>" title="<?php echo $item['name'] ?>" ><?php echo $item['name'] ?></a>
-                                    </h3>
-                                    <div class="post-des"><?php echo $item['short_description'] ?></div>
-                                    <div class="readMore">
-                                        <a href="post-detail.php?id=<?php echo $item['id'] ?>">Xem thêm</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
+        
 <!--  End.page      -->
 
     </section>

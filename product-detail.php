@@ -48,12 +48,11 @@ $sanphamcungloai = $db->fetchsql($sql);
 
                 <ul class="nav nav-tabs">
                     <li class="active"><a data-toggle="tab" href="#home">Thông tin sản phẩm </a></li>
-                    <li><a data-toggle="tab" href="#menu1">Bình luận facebook</a></li>
                     <li><a data-toggle="tab" href="#menu2">Bình luận</a></li>
                 </ul>
                 <div class="tab-content">
                     <div id="home" class="tab-pane fade in active">
-                        <h3 style="margin-bottom: 20px">Xe: <?php echo $detail_product['name'] ?></h3>
+                        <h3 style="margin-bottom: 20px">Điện thoại: <?php echo $detail_product['name'] ?></h3>
                         <div class="product-detail-content">
                             <?php echo $detail_product['content'] ?>
                         </div>
@@ -188,7 +187,7 @@ $sanphamcungloai = $db->fetchsql($sql);
                     </h2>
                     <div class="title_hr_office">
                         <div class="title_hr_icon">
-                            <i class="fa fa-motorcycle" aria-hidden="true"></i>
+                            <i class="fa fa-list" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>

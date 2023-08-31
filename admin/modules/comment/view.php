@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <h1>Nội dung bình luận</h1>
         </div>
         <div class="button-custom">
-            <a class="btn-add" href="index.php"><i class="fa fa-angle-double-left"></i> Trở về</a>
+            <a class="btn-add" href="index.php">Quay lại</a>
         </div>
         <div class="clearfix"></div>
         <div class="info-comment">

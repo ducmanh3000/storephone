@@ -19,19 +19,12 @@ $transaction = $db->fetchsql($sql);
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item active">Đơn hàng</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
+    <div class="admin-title-top">
+            <h1 style="color: #1A1E28 !important; padding-bottom: 30px;">Đơn hàng</h1>
+        </div>
         <!--Thông báo lỗi    -->
         <?php require_once __DIR__."/../../../partials/notification.php"; ?>
-        <div class="admin-title-top">
-            <h1>Danh sách đơn hàng</h1>
-        </div>
+        
         <!-- End. admin-title-top   -->
 
         <!--End.button-custom    -->
@@ -42,20 +35,18 @@ $transaction = $db->fetchsql($sql);
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <i class="fas fa-table"></i>
-                    Đơn hàng</div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                            <tr>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr style="background-color: black; color: white;">
                                 <th>STT</th>
                                 <th>Tên khách hàng</th>
                                 <th>Số điện thoại</th>
-                                <th>Status</th>
+                                <th>Tình trạng</th>
                                 <th>Trạng thái</th>
                             </tr>
-                            </thead>
+                        </thead>
                             <tbody>
                             <?php $stt = 1; foreach ($transaction as $item): ?>
                                 <?php
@@ -76,20 +67,20 @@ $transaction = $db->fetchsql($sql);
                                         </td>
                                     <?php endforeach; ?>
                                     <td>
-                                        <ul class="list-action">
-                                            <li class="item-edit">
+                                        <ul class="list-action" >
+                                            <li class="item-edit" style="width: 35px; height: 35px;">
                                                 <a href="view.php?id=<?php echo $item['id'] ?>" title="Xem chi tiết">
-                                                    <i class="fa fa-eye"></i>
+                                                    Xem
                                                 </a>
                                             </li>
-                                            <li class="item-print">
+                                            <li class="item-print" style="width: 35px; height: 35px;">
                                                 <a target="_blank" href="print.php?id=<?php echo $item['id'] ?>" title="In hóa đơn">
-                                                    <i class="fa fa-print"></i>
+                                                    In
                                                 </a>
                                             </li>
-                                            <li class="item-delete">
+                                            <li class="item-delete" style="width: 35px; height: 35px;">
                                                 <a href="delete.php?id=<?php echo $item['id'] ?>" title="Xóa danh mục">
-                                                    <i class="fa fa-trash-alt"></i>
+                                                    Xóa
                                                 </a>
                                             </li>
                                         </ul>
@@ -97,10 +88,10 @@ $transaction = $db->fetchsql($sql);
                                 </tr>
                                 <?php $stt++ ; endforeach ?>
                             </tbody>
-                        </table>
-                    </div>
+                    </table>
                 </div>
-                <div class="card-footer small text-muted">Đồ án tốt nghiệp - Sinh Viên: Tạ Mạnh Tiền</div>
+                </div>
+                </div>    
             </div>
         </div>
         <!--End.admin-content-->

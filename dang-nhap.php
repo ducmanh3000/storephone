@@ -57,11 +57,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                 <!--Thông báo lỗi-->
                 <?php require_once __DIR__."/partials/notification.php"; ?>
 
-                <div class="title_hr_office">
-                    <div class="title_hr_icon">
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                </div>
             </div>
 
             <div class="form-custom">
@@ -87,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-danger">Đăng nhập </button>
+                        <button type="submit" class="btn btn-danger" style="background-color: black">Đăng nhập </button>
                     </div>
                 </form>
             </div>

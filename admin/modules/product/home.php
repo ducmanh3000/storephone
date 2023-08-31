@@ -5,11 +5,15 @@ require_once __DIR__."/../../autoload/autoload.php";
 /*
  * Lấy danh sách danh mục sản phẩm
    */
+
 $id = intval(getInput('id'));
+
 //_debug($id);
 
 $Editproduct = $db->fetchID("product", $id);
+
 //_debug($Editproduct);die;
+
 if(empty($Editproduct))
 {
     $_SESSION['error'] = "Dữ liệu không tồn tại";

@@ -89,14 +89,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <div class="product-title">
                 <h2>
                     <a href="#">
-                        Đăng ký thành viên
+                        Đăng ký 
                     </a>
                 </h2>
-                <div class="title_hr_office">
-                    <div class="title_hr_icon">
-                        <i class="fa fa-users" aria-hidden="true"></i>
-                    </div>
-                </div>
             </div>
             <div class="form-custom">
                 <form action="" method="POST" class="form-horizontal" role="form">
@@ -151,7 +146,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success">Đăng ký</button>
+                        <button type="submit" class="btn btn-success" style="background-color: black;">Đăng ký</button>
                     </div>
                 </form>
             </div>

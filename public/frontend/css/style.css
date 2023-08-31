@@ -46,7 +46,7 @@ h1,h2,h3,h4,h5,h6
 
 #header-text a{
     color: white;
-    background-color: rgb(230, 126, 34);
+    background-color: black;
     padding:5px 7px;
     line-height: 35px;
     border-radius: 3px;
@@ -171,7 +171,7 @@ h1,h2,h3,h4,h5,h6
 }
 #header-right i
 {
-    color: #ea3a3c;
+    color: black;
     font-size: 30px;
     padding-right: 10px;
 }
@@ -180,7 +180,7 @@ h1,h2,h3,h4,h5,h6
 /* ====================MENUNAV================== */
 #menunav
 {
-    background: #0a32f7;
+    background: #ffffffb0;
     min-height: 40px;
 }
 #menu-main > li
@@ -191,7 +191,7 @@ h1,h2,h3,h4,h5,h6
 {
     color: white;
     font-weight:bold;
-    background: #0a32f7;
+    background: black;
     line-height: 40px;
     text-transform: uppercase;
     font-size: 12px;
@@ -214,7 +214,7 @@ h1,h2,h3,h4,h5,h6
 }
 #menu-main > li > a:hover
 {
-    background: #d11618;
+    background: rgba(22, 22, 23, .8);
 }
 #main-shopping
 {
@@ -224,7 +224,7 @@ h1,h2,h3,h4,h5,h6
 {
     color: white;
     font-weight:bold;
-    background-color: #d11618;;
+    background-color: black;
     line-height: 40px;
     text-transform: uppercase;
     font-size: 12px;
@@ -261,7 +261,7 @@ h1,h2,h3,h4,h5,h6
 }
 .box-title
 {
-    background:#ea3a3c;
+    background:black;
     color: white;
     font-weight: bold;
     font-size: 14px;
@@ -271,7 +271,7 @@ h1,h2,h3,h4,h5,h6
 {
     color: white;
     font-size: 20px;
-    background: #da1719;;
+    background: black;
     padding: 12px;
 }
 /* menud a cap */
@@ -407,7 +407,7 @@ h1,h2,h3,h4,h5,h6
 }
 .info-item a:hover
 {
-    color: #ea3a3c;
+    color: #45C817;
 }
 .price
 {

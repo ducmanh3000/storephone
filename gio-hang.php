@@ -15,17 +15,12 @@ if ( !isset($_SESSION['cart']) | count($_SESSION['cart']) == 0)
 <div class="col-md-9 bor">
 
     <section class="box-main1">
-        <div class="product-title">
+        <div class="product-title" style="    margin-bottom: 30px; letter-spacing: 4px; font-family: 'Roboto', sans-serif;">
             <h2>
                 <a href="#">
-                    Giỏ hàng của bạn
+                    Giỏ hàng 
                 </a>
             </h2>
-            <div class="title_hr_office">
-                <div class="title_hr_icon">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                </div>
-            </div>
         </div>
         <div class="notification-text">
             <?php if (isset($_SESSION['success'])) :?>
@@ -65,13 +60,11 @@ if ( !isset($_SESSION['cart']) | count($_SESSION['cart']) == 0)
                             <td>
                                 <ul class="order-cart-list">
                                     <li>
-                                        <a href="remove.php?key=<?php echo $key ?>" class="btn btn-danger" title="Xóa">
-                                            <i class="fa fa-trash"></i>
+                                        <a href="remove.php?key=<?php echo $key ?>" class="btn btn-danger" title="Xóa">Xóa
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="" class="btn btn-success updatecart" data-key=<?php echo $key ?> title="Cập nhật">
-                                            <i class="fa fa-refresh"></i>
+                                        <a href="" class="btn btn-success updatecart" data-key=<?php echo $key ?> title="Cập nhật">Load
                                         </a>
                                     </li>
                                 </ul>
@@ -96,17 +89,9 @@ if ( !isset($_SESSION['cart']) | count($_SESSION['cart']) == 0)
                                 <h3>Thông tin đơn hàng</h3>
                             </li>
                             <li class="list-group-item">
-                                <span class="badge"><?php echo formatPrice($_SESSION['tongtien']) ?></span>
-                                Số tiền
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge">10 %</span>
-                                Thuế VAT
-                            </li>
-                            <li class="list-group-item">
                                 <span class="badge">
                                     <?php
-                                    $_SESSION['total'] = $_SESSION['tongtien'] * 110/100;
+                                    $_SESSION['total'] = $_SESSION['tongtien'] ;
                                     echo formatPrice($_SESSION['total']);
                                     ?>
                                 </span>
@@ -114,7 +99,7 @@ if ( !isset($_SESSION['cart']) | count($_SESSION['cart']) == 0)
                             </li>
                             <li class="list-group-item">
                                 <a href="<?php echo base_url() ?>" class="btn btn-danger">Tiếp tục mua hàng</a>
-                                <a style="float: right" href="thanh-toan.php" class="btn btn-success">Thanh toán</a>
+                                <a style="float: right" href="thanh-toan.php" class="btn btn-success">Thanh toán</a> 
                             </li>
                         </ul>
                     </div>

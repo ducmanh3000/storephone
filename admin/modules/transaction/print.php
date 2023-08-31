@@ -40,11 +40,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <!--Thông báo lỗi    -->
         <?php require_once __DIR__."/../../../partials/notification.php"; ?>
         <div class="store-top">
-            <h3>Cửa hàng xe máy Cao Sơn</h3>
-            <p>Phường đồng nguyên - T.X Từ Sơn - Bắc Ninh</p>
+            <h3>Công ty Itop</h3>
+            <p>TP Hà Nội</p>
         </div>
         <div class="admin-title-top">
-            <h1>Phiếu xuất hàng</h1>
+            <h1>HÓA ĐƠN</h1>
         </div>
         <!-- End. admin-title-top   -->
 
@@ -95,28 +95,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                         <ul>
                             <li>
                                 <ul class="item-order">
-                                    <li class="order-item-1 order-item-3"><strong>Cửa hàng: </strong></li>
-                                    <li class="order-item-2">Cửa hàng xe máy Cao  Sơn</li>
+                                    <li class="order-item-1 order-item-3"><strong>Store: </strong></li>
+                                    <li class="order-item-2">Smartphone Itop</li>
                                 </ul>
                             </li>
 
                             <li>
                                 <ul class="item-order">
                                     <li class="order-item-1 order-item-3"><strong>Email: </strong></li>
-                                    <li class="order-item-2">xemaycaoson@gmail.com</li>
+                                    <li class="order-item-2">smartphoneitop@gmail.com</li>
                                 </ul>
                             </li>
 
                             <li>
                                 <ul class="item-order">
                                     <li class="order-item-1 order-item-3"><strong>Số điện thoại: </strong></li>
-                                    <li class="order-item-2">0336636255</li>
+                                    <li class="order-item-2">0971005069</li>
                                 </ul>
                             </li>
                             <li>
                                 <ul class="item-order">
                                     <li class="order-item-1 order-item-3"><strong>Địa chỉ: </strong></li>
-                                    <li class="order-item-2">Phường Đồng Nguyên - T.X Từ Sơn - Tỉnh Bắc Ninh</li>
+                                    <li class="order-item-2">Hà Nội</li>
                                 </ul>
                             </li>
 
@@ -238,14 +238,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     <div class="order-3-between order-3-custom">
                         <h4>Nv bán hàng</h4>
                         <i>(Ký, họ tên)</i>
-                        <p>PG Cao Sơn</p>
+                        <p>Nguyễn Văn A</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="order-3-right order-3-custom">
                         <h4>Thu ngân</h4>
                         <i>(Ký, họ tên)</i>
-                        <p>Nguyễn Thi Huyền</p>
+                        <p>Nguyễn Thị A</p>
                     </div>
                 </div>
             </div>
@@ -254,7 +254,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
         <div class="order-4"></div>
         <div class="order-5">
             <p>
-                * Trung tâm bảo hành motor - xe máy chính hãng: Tại Bắc Ninh: ĐC: Cửa hàng motor - xe máy Cao Sơn. Địa chỉ: Phường Đồng Nguyên - T.X Từ Sơn - Bắc Ninh.
+                * Trung tâm bảo hành smartphone chính hãng: Tại Hà Nội: ĐC: Cửa hàng Smartphone Itop. Địa chỉ: Hà Nội.
 
             </p>
             <p>
@@ -267,7 +267,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
                     1. Quý khách vui lòng sử dụng sản phẩm theo đúng hướng dẫn sử dụng đi kèm của nhà sản xuất
                 </li>
                 <li>
-                    2. Quý khách vui lòng mang xe đến trung tâm bảo hành của cửa hàng xe máy Cao Sơn để thay dầu và bảo hành theo thời hạn.
+                    2. Quý khách vui lòng mang smartphone đến cửa hàng để được bảo hành và hỗ trợ theo thời hạn.
                 </li>
             </ul>
             <p>

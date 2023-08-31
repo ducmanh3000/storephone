@@ -22,7 +22,7 @@ $tintuccungloai = $db->fetchsql($sql);
     <section class="box-main1">
         <div class="post-detail">
             <div class="post-detail-top">
-                <h1 class="text-center post-detail-title">
+                <h1 class="text-center post-detail-title" style="color: black;">
                     <?php echo $detail_post['name'] ?>
                 </h1>
             </div>

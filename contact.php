@@ -58,17 +58,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 <div class="col-md-9 bor">
 
     <section class="box-main1">
-        <div class="product-title">
+        <div class="product-title" style="    margin-bottom: 30px; letter-spacing: 4px; font-family: 'Roboto', sans-serif;">
             <h2>
                 <a href="#">
                     Liên hệ
                 </a>
             </h2>
-            <div class="title_hr_office">
-                <div class="title_hr_icon">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                </div>
-            </div>
         </div>
         <div class="notification-text">
             <?php if (isset($_SESSION['success'])) :?>
@@ -151,13 +146,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
                 </div>
 
-                <button type="submit" class="btn btn-success">Gửi liên hệ</button>
+                <button type="submit" class="btn btn-success" style="    background-color: black; border-color: black;">Gửi liên hệ</button>
             </form>
         </div>
 
-        <div class="contact-google-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d59546.700201149346!2d105.974015!3d21.125768!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc33b2a062467a9c2!2sHEAD+honda+Cao+S%C6%A1n!5e0!3m2!1sen!2sus!4v1561082715456!5m2!1sen!2sus" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-        </div>
 
         <!-- Nội dung -->
     </section>

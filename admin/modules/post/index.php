@@ -14,21 +14,14 @@ $post = $db->fetchsql($sql);
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item active">Tin tức</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
+        
         <div class="admin-title-top">
-            <h1>Tin tức</h1>
+            <h1 style="color: #1A1E28 !important;">Tin tức</h1>
         </div>
-        <!-- End. admin-title-top   -->
         <div class="button-custom">
             <a class="btn-add" href="add.php"><i class="fa fa-plus"></i> Thêm mới</a>
         </div>
+       
         <!--End.button-custom    -->
         <div class="clearfix"></div>
         <!--Thông báo lỗi    -->
@@ -37,33 +30,23 @@ $post = $db->fetchsql($sql);
             <!-- DataTables Example -->
             <div class="card mb-3">
                 <div class="card-header">
-                    <i class="fas fa-table"></i>
-                    Tin tức</div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                            <thead>
-                            <tr>
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr style="background-color: black; color: white;">
                                 <th>STT</th>
-                                <th>Tiêu đề</th>
-                                <th>Slug</th>
-                                <th>Home</th>
+                                <th>Mô tả</th>
                                 <th>Ảnh</th>
                                 <th>Ngày tạo</th>
                                 <th>Trạng thái</th>
                             </tr>
-                            </thead>
+                        </thead>    
                             <tbody>
                             <?php $stt = 1; foreach ($post as $item): ?>
                                 <tr>
                                     <td><?php echo $stt ?></td>
                                     <td><?php echo $item['name'] ?></td>
-                                    <td><?php echo $item['slug'] ?></td>
-                                    <td>
-                                        <a class="btn <?php echo $item['home'] == 1 ? 'btn-success' : 'btn-danger' ?>" href="home.php?id=<?php echo $item['id'] ?>">
-                                            <?php echo $item['home'] == 1 ? 'Active' : 'Pause' ?>
-                                        </a>
-                                    </td>
                                     <td>
                                         <img src="<?php echo uploads() ?>post/<?php echo $item['thumbar'] ?>" width="80px" height="80px" />
                                     </td>
@@ -72,12 +55,12 @@ $post = $db->fetchsql($sql);
                                         <ul class="list-action">
                                             <li class="item-edit">
                                                 <a href="edit.php?id=<?php echo $item['id'] ?>" title="Chỉnh sửa tin tức">
-                                                    <i class="fa fa-edit"></i>
+                                                    Sửa
                                                 </a>
                                             </li>
                                             <li class="item-delete">
                                                 <a href="delete.php?id=<?php echo $item['id'] ?>" title="Xóa tin tức">
-                                                    <i class="fa fa-trash-alt"></i>
+                                                    Xóa
                                                 </a>
                                             </li>
                                         </ul>
@@ -85,10 +68,11 @@ $post = $db->fetchsql($sql);
                                 </tr>
                                 <?php $stt++ ; endforeach ?>
                             </tbody>
-                        </table>
-                    </div>
+                            <!-- End. admin-title-top   -->
+                    </table>
                 </div>
-                <div class="card-footer small text-muted">Đồ án tốt nghiệp - Sinh Viên: Tạ Mạnh Tiền</div>
+                </div>
+                </div>
             </div>
         </div>
         <!--End.admin-content-->

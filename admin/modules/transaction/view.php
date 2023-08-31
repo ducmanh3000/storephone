@@ -35,15 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item active">Đơn hàng</li>
-            <li class="breadcrumb-item active">Thông tin đơn hàng</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
+       
         <!--Thông báo lỗi    -->
         <?php require_once __DIR__."/../../../partials/notification.php"; ?>
         <div class="admin-title-top">
@@ -127,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             </div>
 
             <div class="sent-email">
-                <a class="btn btn-danger" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" style="margin: 30px 0px; float: right;">Gửi Email Xác Nhận</a>
+                <a class="btn btn-danger" href="http://localhost/storephone/admin/modules/transaction/" style="margin: 30px 0px; float: right;">Quay lại</a>
             </div>
         </div>
         <!--End.admin-content-->

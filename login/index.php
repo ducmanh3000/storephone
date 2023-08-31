@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             // Nếu $is_check khác NULL thì đăng nhập thất bại
             $_SESSION['admin_name'] = $is_check['name'];
             $_SESSION['admin_id'] = $is_check['id'];
-            echo "<script>alert('Đăng nhập thành công');location.href='/storemotor/admin/'</script>";
+            echo "<script>alert('Đăng nhập thành công');location.href='/storephone/admin/'</script>";
 
         }
         else
@@ -64,7 +64,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     body, html {
         height: 100%;
         background-repeat: no-repeat;
-        background-image: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));
+        background-color: #F7F7F7;
+        
     }
 
     .card-container.card {
@@ -85,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
      * Card component
      */
     .card {
-        background-color: #F7F7F7;
+        background-color: white;
         /* just in case there no content*/
         padding: 20px 25px 30px;
         margin: 0 auto 25px;
@@ -209,13 +210,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
             <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
             <div id="remember" class="checkbox">
                 <label>
-                    <input type="checkbox" value="remember-me"> Remember me
+                    <input type="checkbox" value="remember-me"> Ghi nhớ
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Đăng nhập</button>
         </form><!-- /form -->
         <a href="#" class="forgot-password">
-            Forgot the password?
+            Quên mật khẩu?
         </a>
     </div><!-- /card-container -->
 </div><!-- /container -->

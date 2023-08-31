@@ -2,7 +2,7 @@
 <footer class="sticky-footer">
     <div class="container my-auto">
         <div class="copyright text-center my-auto">
-            <span>Tạ Mạnh Tiền</span>
+            <span>Đinh Đức Mạnh</span>
         </div>
     </div>
 </footer>

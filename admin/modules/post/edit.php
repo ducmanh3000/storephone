@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
     // error trống có nghĩa là không có lỗi
     if(empty($error)){
         $isset = $db->fetchOne("post","name = '".$data['name']."' ");
-        if(count($isset) > 0){
+        if (is_countable($isset) && count($isset) > 0){
             $_SESSION['error'] = "Tên tin tức đã tồn tại";
         }
         else{
@@ -94,24 +94,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
     <!--Nội dụng-->
     <div class="container-fluid">
-        <!-- Breadcrumbs-->
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="breadcrumb-item">
-                <a href="index.php">Tin tức</a>
-            </li>
-            <li class="breadcrumb-item active">Thông tin tin tức</li>
-        </ol>
-        <!-- End.Breadcrumbs-->
+        
 
         <div class="admin-title-top">
             <h1>Thông tin tin tức</h1>
         </div>
         <!-- End. admin-title-top   -->
         <div class="button-custom">
-            <a class="btn-add" href="index.php"><i class="fa fa-angle-double-left"></i> Trở về</a>
+            <a class="btn-add" href="index.php">Quay lại</a>
         </div>
         <!--Thông báo lỗi-->
         <?php require_once __DIR__."/../../../partials/notification.php"; ?>

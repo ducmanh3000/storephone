@@ -7,9 +7,9 @@ $db = new Database;
 
 if ( !isset($_SESSION['admin_id']))
 {
-    header("location: /storemotor/login");
+    header("location: /storephone/login");
 }
 
-define("ROOT", $_SERVER['DOCUMENT_ROOT'] ."/storemotor/public/uploads/");
+define("ROOT", $_SERVER['DOCUMENT_ROOT'] ."/storephone/public/uploads/");
 
 ?>

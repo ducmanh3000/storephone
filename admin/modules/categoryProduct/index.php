@@ -20,7 +20,7 @@ $category = $db->fetchAll("category_product");
     </ol>
     <!-- End.Breadcrumbs-->
     <div class="admin-title-top">
-        <h1>Danh mục sản phẩm</h1>
+        <h1 style="color: #1A1E28 !important;">Danh mục sản phẩm</h1>
     </div>
     <!-- End. admin-title-top   -->
     <div class="button-custom">
@@ -81,7 +81,6 @@ $category = $db->fetchAll("category_product");
                     </table>
                 </div>
             </div>
-            <div class="card-footer small text-muted">Đồ án tốt nghiệp - Sinh Viên: Tạ Mạnh Tiền</div>
         </div>
     </div>
     <!--End.admin-content-->

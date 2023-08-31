@@ -6807,7 +6807,11 @@ button.bg-warning:focus {
 }
 
 .bg-danger {
-  background-color: #dc3545 !important;
+  background-color: #b7b48b61 !important;
+}
+
+.row > div:nth-child(6) > div {
+    background-color: red !important;
 }
 
 a.bg-danger:hover, a.bg-danger:focus,
@@ -10447,7 +10451,7 @@ body {
 
 .navbar-nav .nav-item.active .nav-link {
   color: #fff;
-  background: #007bff;
+  background: #45C817;
 }
 .navbar-nav .nav-item:hover .nav-link{
   background: #39b54a;
@@ -10603,9 +10607,7 @@ body {
   top: -1.25rem;
   right: -1rem;
   opacity: 0.4;
-  font-size: 5rem;
-  -webkit-transform: rotate(15deg);
-  transform: rotate(15deg);
+  font-size: 6rem;
 }
 
 @media (min-width: 576px) {
